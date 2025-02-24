@@ -1,0 +1,648 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+.content-wrapper {
+  max-width: 1280px;
+  min-height: 200px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "Proxima Nova ScOsf Extra Condensed";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url("../fonts/ProximaNovaScOsfExtraCondensed.ttf");
+  src: url("../fonts/Gill Sans Light Italic.otf") format("opentype");
+  font-weight: lighter;
+  font-style: italic;
+}
+.hero-holder {
+  max-width: 1280px;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/hero\ \(2\).jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hero-holder .hero-content {
+  text-align: center;
+  padding-top: 70px;
+}
+.hero-holder .hero-content h3 {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 25px;
+  font-weight: 50;
+}
+.hero-holder .hero-content p {
+  font-family: "Gill Sans", sans-serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 40;
+  font-style: italic;
+}
+.hero-holder .hero-content button {
+  width: 121px;
+  height: 40px;
+  background: #79ADDC;
+  color: #fff;
+  border: none;
+  margin-top: 40px;
+  font-size: 15px;
+  font-weight: 50;
+  font-family: "Gill Sans", sans-serif;
+}
+
+@media (max-width: 850px) {
+  .hero-holder {
+    height: 450px;
+  }
+  .hero-holder .hero-content {
+    padding-top: 60px;
+  }
+  .hero-holder .hero-content h3 {
+    font-size: 35px;
+  }
+  .hero-holder .hero-content p {
+    font-size: 18px;
+  }
+  .hero-holder .hero-content button {
+    width: 110px;
+    height: 38px;
+    font-size: 14px;
+  }
+}
+@font-face {
+  font-family: "Gill Sans";
+  src: url("../fonts/GillSans-Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+nav {
+  width: 100%;
+  max-width: 980px;
+  min-height: 92px;
+  border-bottom: solid 2px #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 99;
+  margin: 0 auto;
+  color: #000;
+}
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+nav .logo {
+  width: auto;
+  padding: 10px 10px 0px 10px;
+  border: 2px solid #000;
+}
+nav .logo a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 10;
+}
+nav .links {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+nav .links a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 10;
+}
+
+@media (max-width: 1050px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .logo {
+    margin-bottom: 10px;
+  }
+  .logo a {
+    font-size: 18px;
+  }
+  .links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .links a {
+    font-size: 14px;
+    margin: 5px;
+  }
+}
+@font-face {
+  font-family: "Proxima Nova ScOsf Extra Condensed";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url("../fonts/ProximaNovaScOsfExtraCondensed.ttf");
+  src: url("../fonts/Gill Sans Light Italic.otf") format("opentype");
+  font-weight: lighter;
+  font-style: italic;
+}
+.trip-images {
+  max-width: 818px;
+  min-height: 304px;
+  margin: 0 auto;
+  margin-top: -43px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.trip-images .pic1,
+.trip-images .pic2,
+.trip-images .pic3 {
+  width: 236px;
+  height: 304px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.trip-images .pic1 h2,
+.trip-images .pic2 h2,
+.trip-images .pic3 h2 {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 50;
+}
+.trip-images .pic1 p,
+.trip-images .pic2 p,
+.trip-images .pic3 p {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 40;
+  margin-bottom: 50px;
+}
+.trip-images .pic1 .learn-more,
+.trip-images .pic2 .learn-more,
+.trip-images .pic3 .learn-more {
+  width: 133px;
+  height: 40px;
+  background: #79ADDC;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 50;
+  font-family: "Gill Sans", sans-serif;
+}
+.trip-images .pic1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/tour-01.jpg");
+}
+.trip-images .pic2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/tour-02.jpg");
+}
+.trip-images .pic3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/tour-03.jpg");
+}
+
+@media (max-width: 1050px) {
+  .trip-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 30px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .trip-images .pic1,
+  .trip-images .pic2,
+  .trip-images .pic3 {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+  }
+}
+@font-face {
+  font-family: "Proxima Nova ScOsf Extra Condensed";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url("../fonts/ProximaNovaScOsfExtraCondensed.ttf");
+  src: url("../fonts/Gill Sans Light Italic.otf") format("opentype");
+}
+.booking-form {
+  display: flex;
+  flex-direction: column;
+}
+.booking-form h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  padding-left: 228px;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 60px;
+  color: #000;
+  font-weight: 20;
+}
+.booking-form .top-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 0 40px;
+}
+.booking-form .top-inputs input {
+  border: solid 1px #79ADDC;
+  height: 58px;
+  padding-left: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  font-weight: 30;
+}
+.booking-form .top-inputs .small {
+  width: 344px;
+}
+.booking-form .top-inputs .big {
+  width: 453px;
+}
+.booking-form .check-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  font-weight: 30;
+}
+.booking-form .check-wrapper .check-in {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px;
+  justify-content: center;
+  padding: 20px 40px 0 40px;
+}
+.booking-form .check-wrapper .check-in .box {
+  position: relative;
+}
+.booking-form .check-wrapper .check-in .box input {
+  border: solid 1px #79ADDC;
+  height: 58px;
+  padding-left: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  font-weight: 30;
+  width: 698px;
+}
+.booking-form .check-wrapper .check-in .box .icon {
+  position: absolute;
+  right: 10px;
+  bottom: 16px;
+}
+.booking-form .check-wrapper .check-out {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px;
+  justify-content: center;
+  margin: 0 !important;
+}
+.booking-form .check-wrapper .check-out .box {
+  position: relative;
+}
+.booking-form .check-wrapper .check-out .box input {
+  border: solid 1px #79ADDC;
+  height: 58px;
+  padding-left: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  font-weight: 30;
+  width: 698px;
+}
+.booking-form .check-wrapper .check-out .box .icon {
+  position: absolute;
+  right: 10px;
+  bottom: 16px;
+}
+.booking-form .room-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 20px 40px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  font-weight: 30;
+}
+.booking-form .room-info .boxes {
+  position: relative;
+}
+.booking-form .room-info .boxes input {
+  border: solid 1px #79ADDC;
+  height: 58px;
+  padding-left: 20px;
+  width: 103px;
+}
+.booking-form .room-info .boxes .icons {
+  position: absolute;
+  right: 10px;
+  bottom: 18px;
+}
+.booking-form .message-box {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 20px 40px;
+}
+.booking-form .message-box textarea {
+  border: solid 1px #79ADDC;
+  height: 192px;
+  width: 818px;
+  padding: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  font-weight: 30;
+}
+.booking-form button {
+  margin: 0 auto;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  width: 813px;
+  height: 60px;
+  background: #79ADDC;
+  color: white;
+  border: none;
+  border-radius: 30px;
+}
+
+@media (max-width: 1050px) {
+  .booking-form {
+    width: 90%;
+    padding: 20px;
+  }
+  .booking-form h2 {
+    font-size: 45px;
+    padding-left: 0;
+  }
+  .top-inputs {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  .top-inputs .small,
+  .top-inputs .big {
+    width: 100%;
+  }
+  .check-wrapper {
+    gap: 15px;
+  }
+  .check-in,
+  .check-out {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .check-in .box input,
+  .check-out .box input {
+    width: 100%;
+  }
+  .room-info {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .room-info .room-info .boxes input {
+    width: 80px;
+  }
+  .room-info .message-box textarea {
+    width: 80%;
+    max-width: 600px;
+  }
+  .room-info button {
+    width: 100%;
+    font-size: 14px;
+    height: 50px;
+  }
+}
+@font-face {
+  font-family: "Proxima Nova ScOsf Extra Condensed";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url("../fonts/ProximaNovaScOsfExtraCondensed.ttf");
+  src: url("../fonts/Gill Sans Light Italic.otf") format("opentype");
+  font-weight: lighter;
+  font-style: italic;
+}
+.about-wrapper {
+  max-width: 980px;
+  justify-content: space-between;
+  margin-top: 90px;
+  margin-bottom: 40px;
+  margin: 0 auto;
+}
+.about-wrapper .top-content {
+  margin-top: 90px;
+  margin-bottom: 40px;
+}
+.about-wrapper .top-content h1 {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 60px;
+  color: #000;
+  margin-bottom: 36px;
+  font-weight: 50;
+  text-decoration: underline 2px #000;
+}
+.about-wrapper .top-content p {
+  font-family: "Gill Sans", sans-serif;
+  font-size: 16px;
+  color: #000;
+  font-weight: 40;
+  font-style: normal;
+  margin-bottom: 95px;
+}
+.about-wrapper .top-content h2 {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 40px;
+  color: #000;
+  font-weight: 50;
+  font-style: normal;
+  text-decoration: underline 2px #000;
+}
+.about-wrapper .bottom-content {
+  min-height: 200px;
+}
+.about-wrapper .bottom-content .quote {
+  max-width: 722px;
+  min-height: 150px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.about-wrapper .bottom-content .quote .quote-image-holder {
+  width: 260px;
+  height: 150px;
+}
+.about-wrapper .bottom-content .quote .quote-image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.about-wrapper .bottom-content .quote .quote-text-author {
+  width: 385px;
+  height: 150px;
+  margin: auto;
+  position: relative;
+}
+.about-wrapper .bottom-content .quote .quote-text-author p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+}
+.about-wrapper .bottom-content .quote .quote-text-author .author {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: proxima-nova, sans-serif;
+  font-size: 20px;
+  color: #79ADDC;
+  font-weight: 20;
+  font-style: normal;
+}
+
+@media (max-width: 722px) {
+  .about-wrapper .bottom-content .quote {
+    flex-direction: column;
+    width: 260px;
+    margin: 0 auto 20px auto;
+  }
+  .about-wrapper .bottom-content .quote .quote-text-author {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+@font-face {
+  font-family: "Gill Sans";
+  src: url("../fonts/Gill Sans Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #79ADDC;
+  color: #fff;
+  padding: 40px 150px;
+  max-width: 1280px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+footer .footer-content {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-content .footer-logo {
+  padding-top: 10px;
+  border: 2px solid white;
+}
+footer .footer-content .footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  font-weight: 30;
+}
+footer .footer-content .footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 21px;
+  padding: 20px;
+}
+footer .footer-content .footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 10%;
+  background-color: #fff;
+  color: #79ADDC;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+@media (max-width: 1150px) {
+  footer {
+    max-width: 100%;
+    /* Ensures footer adapts to smaller screens */
+    /* Reduce left & right padding */
+    height: auto;
+    /* Allow height to adjust dynamically */
+  }
+  .footer-content {
+    flex-direction: column;
+    /* Stack elements for better readability */
+    text-align: center;
+    align-items: center;
+    /* Center items properly */
+    gap: 20px;
+    /* Adds spacing between items */
+  }
+  .footer-logo {
+    padding-top: 5px;
+    border: none;
+    /* Optional: remove border if it looks too crowded */
+  }
+  .footer-text {
+    font-size: 14px;
+    /* Reduce text size for smaller screens */
+    gap: 10px;
+    text-align: center;
+  }
+  .footer-social {
+    margin-top: 10px;
+    gap: 15px;
+    /* Reduce spacing between icons */
+  }
+  .footer-social a {
+    width: 20px;
+    /* Slightly smaller icons */
+    height: 20px;
+    font-size: 16px;
+  }
+}

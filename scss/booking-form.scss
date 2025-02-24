@@ -1,0 +1,284 @@
+@font-face {
+    font-family: 'Proxima Nova ScOsf Extra Condensed';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    src: url('../fonts/ProximaNovaScOsfExtraCondensed.ttf');
+    src: url('../fonts/Gill\ Sans\ Light\ Italic.otf') format('opentype');
+
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    // max-width: 818px;
+    // width: 100%;
+    // margin: 0 auto;
+
+
+
+
+    h2 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        margin-top: 40px;
+        padding-left: 228px;
+        font-family: 'Proxima Nova ScOsf Extra Condensed', sans-serif;
+        font-size: 60px;
+        color: #000;
+        font-weight: 20;
+    }
+
+    .top-inputs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+        padding: 0 40px;
+
+        input {
+            border: solid 1px #79ADDC;
+            height: 58px;
+            padding-left: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            font-weight: 30;
+
+        }
+
+        .small {
+            width: 344px;
+        }
+
+        .big {
+            width: 453px;
+        }
+    }
+
+    .check-wrapper {
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px;
+        font-weight: 30;
+
+
+        .check-in {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 55px;
+            justify-content: center;
+            padding: 20px 40px 0 40px;
+
+
+            .p {}
+
+            .box {
+                position: relative;
+
+                input {
+                    border: solid 1px #79ADDC;
+                    height: 58px;
+                    padding-left: 20px;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-size: 18px;
+                    font-weight: 30;
+                    width: 698px;
+
+                }
+
+                .icon {
+                    position: absolute;
+                    right: 10px;
+                    bottom: 16px;
+
+
+                }
+
+            }
+
+
+
+        }
+
+        .check-out {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 44px;
+            justify-content: center;
+            margin: 0 !important;
+
+            .p {}
+
+            .box {
+                position: relative;
+
+                input {
+                    border: solid 1px #79ADDC;
+                    height: 58px;
+                    padding-left: 20px;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-size: 18px;
+                    font-weight: 30;
+                    width: 698px;
+
+                }
+
+                .icon {
+                    position: absolute;
+                    right: 10px;
+                    bottom: 16px;
+
+
+                }
+
+            }
+
+
+
+
+
+
+        }
+    }
+
+    .room-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+        padding: 20px 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px;
+        font-weight: 30;
+
+        p {}
+
+        .boxes {
+            position: relative;
+
+            input {
+                border: solid 1px #79ADDC;
+                height: 58px;
+                padding-left: 20px;
+
+                width: 103px;
+
+            }
+
+            .icons {
+                position: absolute;
+                right: 10px;
+                bottom: 18px;
+
+            }
+
+        }
+
+
+    }
+
+    .message-box {
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+        padding: 20px 40px;
+
+        textarea {
+            border: solid 1px #79ADDC;
+            height: 192px;
+            width: 818px;
+            padding: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            font-weight: 30;
+
+        }
+    }
+
+    button {
+        margin: 0 auto;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+        width: 813px;
+        height: 60px;
+        background: #79ADDC;
+        color: white;
+        border: none;
+        border-radius: 30px;
+    }
+}
+
+
+
+
+
+@media (max-width: 1050px) {
+    .booking-form {
+        width: 90%;
+        padding: 20px;
+
+    }
+
+    .booking-form h2 {
+        font-size: 45px;
+        padding-left: 0;
+
+    }
+
+    .top-inputs {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .top-inputs .small,
+    .top-inputs .big {
+        width: 100%;
+
+    }
+
+    .check-wrapper {
+        gap: 15px;
+
+    }
+
+    .check-in,
+    .check-out {
+        flex-direction: column;
+        gap: 10px;
+
+    }
+
+
+    .check-in .box input,
+    .check-out .box input {
+        width: 100%;
+
+    }
+
+    .room-info {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+
+        .room-info .boxes input {
+            width: 80px;
+        }
+
+        .message-box textarea {
+            width: 80%;
+            max-width: 600px;
+        }
+
+        button {
+            width: 100%;
+            font-size: 14px;
+            height: 50px;
+        }
+    }
+}

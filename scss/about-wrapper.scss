@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Proxima Nova ScOsf Extra Condensed';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    src: url('../fonts/ProximaNovaScOsfExtraCondensed.ttf');
+    src: url('../fonts/Gill\ Sans\ Light\ Italic.otf') format('opentype');
+    font-weight: lighter;
+    font-style: italic;
+}
+
+
+
+.about-wrapper {
+    max-width: 980px;
+    justify-content: space-between;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    margin: 0 auto;
+
+    .top-content {
+        // background-color: blanchedalmond;
+        margin-top: 90px;
+        margin-bottom: 40px;
+
+        h1 {
+            font-family: 'Proxima Nova ScOsf Extra Condensed', sans-serif;
+            font-size: 60px;
+            color: #000;
+            margin-bottom: 36px;
+            font-weight: 50;
+            text-decoration: underline 2px #000;
+
+        }
+
+        p {
+            font-family: 'Gill Sans', sans-serif;
+            font-size: 16px;
+            color: #000;
+            font-weight: 40;
+            font-style: normal;
+            margin-bottom: 95px;
+        }
+
+        h2 {
+            font-family: 'Proxima Nova ScOsf Extra Condensed', sans-serif;
+            font-size: 40px;
+            color: #000;
+            font-weight: 50;
+            font-style: normal;
+            text-decoration: underline 2px #000;
+        }
+
+    }
+
+    .bottom-content {
+        // background-color: burlywood;
+        min-height: 200px;
+
+        .quote {
+
+            max-width: 722px;
+            min-height: 150px;
+            // background-color: blueviolet;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+
+
+            .quote-image-holder {
+                width: 260px;
+                height: 150px;
+                // background-color: brown;
+
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            .quote-text-author {
+                width: 385px;
+                height: 150px;
+                // background-color: cadetblue;
+                margin: auto;
+                position: relative;
+
+                p {
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-size: 16px;
+                    font-style: italic;
+                }
+
+                .author {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    font-family: proxima-nova, sans-serif;
+                    font-size: 20px;
+                    color: #79ADDC;
+                    font-weight: 20;
+                    font-style: normal;
+                }
+
+            }
+        }
+
+    }
+
+}
+
+@media (max-width: 722px) {
+    .about-wrapper {
+        .top-content {}
+
+
+        .bottom-content {
+            .quote {
+                flex-direction: column;
+
+                width: 260px;
+                margin: 0 auto 20px auto;
+
+
+
+
+                .quote-text-author {
+                    margin-top: 20px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('../fonts/Gill\ Sans\ Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #79ADDC;
+    color: #fff;
+    padding: 40px 150px;
+    max-width: 1280px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+
+    .footer-content {
+        width: 100%;
+        max-width: 1280px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .footer-logo {
+            // width: 96px;
+            // height: 42px;
+            padding-top: 10px;
+            border: 2px solid white;
+        }
+
+        .footer-text {
+            // width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+            font-weight: 30;
+
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 21px;
+            padding: 20px;
+        }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 10%;
+            background-color: #fff;
+            color: #79ADDC;
+
+
+
+
+            text-decoration: none;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+    }
+}
+
+
+
+@media (max-width: 1150px) {
+    footer {
+        max-width: 100%;
+        /* Ensures footer adapts to smaller screens */
+        // padding: 40px 50px;
+        /* Reduce left & right padding */
+        height: auto;
+        /* Allow height to adjust dynamically */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        /* Stack elements for better readability */
+        text-align: center;
+        align-items: center;
+        /* Center items properly */
+        gap: 20px;
+        /* Adds spacing between items */
+    }
+
+    .footer-logo {
+        padding-top: 5px;
+        border: none;
+        /* Optional: remove border if it looks too crowded */
+    }
+
+    .footer-text {
+        font-size: 14px;
+        /* Reduce text size for smaller screens */
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-social {
+        margin-top: 10px;
+        // padding: 10px 0;
+        gap: 15px;
+        /* Reduce spacing between icons */
+    }
+
+    .footer-social a {
+        width: 20px;
+        /* Slightly smaller icons */
+        height: 20px;
+        font-size: 16px;
+    }
+}
