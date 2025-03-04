@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'Proxima Nova ScOsf Extra Condensed';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    src: url('../fonts/ProximaNovaScOsfExtraCondensed.ttf');
+    src: url('../fonts/Gill\ Sans\ Light\ Italic.otf') format('opentype');
+    font-weight: lighter;
+    font-style: italic;
+}
+
+
+
+.tours-wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+
+    .tours-header-pic {
+        max-width: 980px;
+        height: 200px;
+        margin: 50px 0 50px 0;
+        position: relative;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/tours-header.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+
+        h2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-family: 'Proxima Nova ScOsf Extra Condensed', sans-serif;
+            font-size: 60px;
+            font-weight: 100;
+            padding: 10px 20px;
+            text-align: center;
+
+        }
+    }
+
+    .tours-pic-container {
+        max-width: 818px;
+        min-height: 1000px;
+        margin: 0 auto;
+
+        .tour-pics {
+            max-width: 818px;
+            height: 304px;
+            margin: 0 auto;
+            margin-bottom: 55px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+
+            .tour-pic1,
+            .tour-pic2,
+            .tour-pic3,
+            .tour-pic4,
+            .tour-pic5,
+            .tour-pic6,
+            .tour-pic7,
+            .tour-pic8,
+            .tour-pic9 {
+                width: 236px;
+                height: 304px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+                h3 {
+                    font-family: 'Proxima Nova ScOsf Extra Condensed', sans-serif;
+                    font-size: 50px;
+                    color: #fff;
+                    font-weight: 100;
+                }
+
+                p {
+                    font-family: 'Proxima Nova ScOsf Extra Condensed', sans-serif;
+                    font-size: 30px;
+                    color: #fff;
+                    font-weight: 100;
+                    margin-bottom: 50px;
+                }
+
+                .learn-more {
+                    width: 133px;
+                    height: 40px;
+                    background: #79ADDC;
+                    color: #fff;
+                    border: none;
+                    border-radius: 20px;
+                    font-size: 15px;
+                    font-weight: 50;
+                    font-family: 'Gill Sans', sans-serif;
+                }
+            }
+        }
+
+        .tour-pic1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-01.jpg);
+        }
+
+        .tour-pic2 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-02.jpg);
+        }
+
+        .tour-pic3 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-03.jpg);
+        }
+
+        .tour-pic4 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-04.jpg);
+        }
+
+        .tour-pic5 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-05.jpg);
+        }
+
+        .tour-pic6 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-06.jpg);
+        }
+
+        .tour-pic7 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-07.jpg);
+        }
+
+        .tour-pic8 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-08.jpg);
+        }
+
+        .tour-pic9 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-09.jpg);
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 760px) {
+    .tours-wrapper .tours-pic-container {
+        width: 100%;
+    }
+
+    .tours-wrapper .tours-pic-container .tour-pics {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        width: 100%;
+
+        max-width: none;
+        min-height: auto;
+
+    }
+
+    .tours-wrapper .tours-pic-container .tour-pics .tour-pic1,
+    .tours-wrapper .tours-pic-container .tour-pics .tour-pic2,
+    .tours-wrapper .tours-pic-container .tour-pics .tour-pic3,
+    .tours-wrapper .tours-pic-container .tour-pics .tour-pic4,
+    .tours-wrapper .tours-pic-container .tour-pics .tour-pic5,
+    .tours-wrapper .tours-pic-container .tour-pics .tour-pic6,
+    .tours-wrapper .tours-pic-container .tour-pics .tour-pic7,
+    .tours-wrapper .tours-pic-container .tour-pics .tour-pic8,
+    .tours-wrapper .tours-pic-container .tour-pics .tour-pic9 {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+}
