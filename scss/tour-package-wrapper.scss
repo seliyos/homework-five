@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Proxima Nova ScOsf Extra Condensed';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    src: url('../fonts/ProximaNovaScOsfExtraCondensed.ttf');
+    src: url('../fonts/Gill\ Sans\ Light\ Italic.otf') format('opentype');
+    font-weight: lighter;
+    font-style: italic;
+}
+
+
+.tour-package-wrapper {
+    max-width: 980px;
+    min-height: 200px;
+    margin: 0 auto;
+    margin-top: 48px;
+
+
+    .tour-header {
+        width: 100%;
+        height: 413px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-01.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        h2 {
+            position: absolute;
+            color: #fff;
+            font-family: 'Proxima Nova ScOsf Extra Condensed', sans-serif;
+            font-size: 60px;
+            font-weight: 100;
+            padding-left: 30px;
+
+        }
+
+        p {
+            position: absolute;
+            bottom: -15px;
+            right: 0;
+            color: #fff;
+            font-family: 'Proxima Nova ScOsf Extra Condensed', sans-serif;
+            font-size: 20px;
+            font-weight: 100;
+        }
+
+    }
+
+    .tours-pic-container {
+        max-width: 978px;
+        min-height: 347px;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .tour-pic1,
+        .tour-pic2,
+        .tour-pic3 {
+            width: 298px;
+            height: 347px;
+            overflow: hidden;
+
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            &:nth-child(1) {
+                background-image: url(../images/israel-tour-01.jpg);
+            }
+
+            &:nth-child(2) {
+                background-image: url(../images/israel-tour-02.jpg);
+            }
+
+            &:nth-child(3) {
+                background-image: url(../images/israel-tour-03.jpg);
+            }
+
+        }
+    }
+
+    .days-container {
+        .days {
+            width: 100%;
+            margin-bottom: 70px;
+
+            h2 {
+                font-family: 'Proxima Nova ScOsf Extra Condensed', sans-serif;
+                font-size: 40px;
+                font-weight: 400;
+                text-decoration: underline 2px #000;
+            }
+
+            p {
+                font-family: 'Gill Sans';
+                font-size: 18px;
+                font-weight: 50;
+            }
+        }
+    }
+
+    .button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+
+        button {
+            width: 133px;
+            height: 40px;
+            display: block;
+            background-color: #79ADDC;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+            font-weight: normal;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+        }
+    }
+}

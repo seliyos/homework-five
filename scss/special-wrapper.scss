@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'Proxima Nova ScOsf Extra Condensed';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    src: url('../fonts/ProximaNovaScOsfExtraCondensed.ttf');
+    src: url('../fonts/Gill\ Sans\ Light\ Italic.otf') format('opentype');
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.special-wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+
+    h2 {
+        font-family: 'Proxima Nova ScOsf Extra Condensed', sans-serif;
+        font-size: 30px;
+        font-weight: lighter;
+        color: #000;
+        margin-top: 55px;
+        margin-bottom: 44px;
+        text-decoration: underline 2px #000;
+
+
+    }
+
+    .content-holder {
+        width: 565px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+
+        .image-holder1 {
+            width: 200px;
+            height: 287px;
+            background-image: url(../images/special-offer-01.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .image-holder2 {
+            width: 200px;
+            height: 287px;
+            background-image: url(../images/special-offer-02.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .text-holder {
+            width: 350px;
+            height: 287px;
+            position: relative;
+
+            .title-holder {
+                margin-bottom: 28px;
+                display: flex;
+
+                .place {
+                    font-family: 'Proxima Nova ScOsf Extra Condensed', sans-serif;
+                    font-size: 30px;
+                    font-weight: lighter;
+                    color: #000;
+                    margin-right: 5px;
+                    text-decoration: underline 2px #000;
+                }
+
+                .discount {
+
+                    font-family: 'Proxima Nova ScOsf Extra Condensed', sans-serif;
+                    font-size: 20px;
+                    font-weight: lighter;
+                    color: #FF7D38;
+                    padding-top: 7px;
+
+                }
+            }
+
+            p {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 16px;
+                font-weight: lighter;
+                color: #000;
+                margin-bottom: 52px;
+            }
+
+            button {
+                width: 133px;
+                height: 40px;
+                background: #79ADDC;
+                color: #fff;
+                border: none;
+                border-radius: 20px;
+                font-size: 15px;
+                font-weight: 50;
+                font-family: 'Gill Sans', sans-serif;
+                position: absolute;
+                bottom: 5px;
+                left: 5px;
+            }
+
+
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 590px) {
+    .special-wrapper {
+        padding: 0 20px;
+
+        h2 {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .content-holder {
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+
+            .image-holder1,
+            .image-holder2 {
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+                aspect-ratio: 3 / 4; // Keeps image ratio on resize
+            }
+
+            .text-holder {
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+                padding: 10px;
+                position: static;
+
+                .title-holder {
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 20px;
+
+                    .place {
+                        font-size: 26px;
+                        text-decoration: underline 1.5px #000;
+                    }
+
+                    .discount {
+                        font-size: 18px;
+                        padding-top: 4px;
+                    }
+                }
+
+                p {
+                    font-size: 15px;
+                    margin-bottom: 20px;
+                }
+
+                button {
+                    position: static;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -580,7 +580,7 @@ nav span.separator {
 .tours-wrapper .tours-header-pic {
   max-width: 980px;
   height: 200px;
-  margin: 50px 0 50px 0;
+  margin: 50px 0;
   position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/tours-header.jpg);
   background-repeat: no-repeat;
@@ -600,19 +600,15 @@ nav span.separator {
   text-align: center;
 }
 .tours-wrapper .tours-pic-container {
-  max-width: 818px;
-  min-height: 1000px;
+  max-width: 980px;
   margin: 0 auto;
 }
 .tours-wrapper .tours-pic-container .tour-pics {
-  max-width: 818px;
-  height: 304px;
-  margin: 0 auto;
-  margin-bottom: 55px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 55px;
 }
 .tours-wrapper .tours-pic-container .tour-pics .tour-pic1,
 .tours-wrapper .tours-pic-container .tour-pics .tour-pic2,
@@ -623,9 +619,8 @@ nav span.separator {
 .tours-wrapper .tours-pic-container .tour-pics .tour-pic7,
 .tours-wrapper .tours-pic-container .tour-pics .tour-pic8,
 .tours-wrapper .tours-pic-container .tour-pics .tour-pic9 {
-  width: 236px;
+  width: 30%;
   height: 304px;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -633,6 +628,8 @@ nav span.separator {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  text-align: center;
+  padding: 20px;
 }
 .tours-wrapper .tours-pic-container .tour-pics .tour-pic1 h3,
 .tours-wrapper .tours-pic-container .tour-pics .tour-pic2 h3,
@@ -661,7 +658,7 @@ nav span.separator {
   font-size: 30px;
   color: #fff;
   font-weight: 100;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .tours-wrapper .tours-pic-container .tour-pics .tour-pic1 .learn-more,
 .tours-wrapper .tours-pic-container .tour-pics .tour-pic2 .learn-more,
@@ -672,15 +669,31 @@ nav span.separator {
 .tours-wrapper .tours-pic-container .tour-pics .tour-pic7 .learn-more,
 .tours-wrapper .tours-pic-container .tour-pics .tour-pic8 .learn-more,
 .tours-wrapper .tours-pic-container .tour-pics .tour-pic9 .learn-more {
+  display: inline-block;
   width: 133px;
   height: 40px;
-  background: #79ADDC;
+  line-height: 40px;
+  background-color: #79ADDC;
   color: #fff;
-  border: none;
+  text-align: center;
+  text-decoration: none;
   border-radius: 20px;
   font-size: 15px;
-  font-weight: 50;
+  font-weight: 400;
   font-family: "Gill Sans", sans-serif;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.tours-wrapper .tours-pic-container .tour-pics .tour-pic1 .learn-more:hover,
+.tours-wrapper .tours-pic-container .tour-pics .tour-pic2 .learn-more:hover,
+.tours-wrapper .tours-pic-container .tour-pics .tour-pic3 .learn-more:hover,
+.tours-wrapper .tours-pic-container .tour-pics .tour-pic4 .learn-more:hover,
+.tours-wrapper .tours-pic-container .tour-pics .tour-pic5 .learn-more:hover,
+.tours-wrapper .tours-pic-container .tour-pics .tour-pic6 .learn-more:hover,
+.tours-wrapper .tours-pic-container .tour-pics .tour-pic7 .learn-more:hover,
+.tours-wrapper .tours-pic-container .tour-pics .tour-pic8 .learn-more:hover,
+.tours-wrapper .tours-pic-container .tour-pics .tour-pic9 .learn-more:hover {
+  background-color: #5a97c9;
 }
 .tours-wrapper .tours-pic-container .tour-pic1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-01.jpg);
@@ -707,22 +720,14 @@ nav span.separator {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-08.jpg);
 }
 .tours-wrapper .tours-pic-container .tour-pic9 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-09.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(../images/tour-09.jpg);
 }
 
 @media screen and (max-width: 760px) {
-  .tours-wrapper .tours-pic-container {
-    width: 100%;
-  }
   .tours-wrapper .tours-pic-container .tour-pics {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    width: 100%;
-    max-width: none;
-    min-height: auto;
+    gap: 30px;
   }
   .tours-wrapper .tours-pic-container .tour-pics .tour-pic1,
   .tours-wrapper .tours-pic-container .tour-pics .tour-pic2,
@@ -733,11 +738,1413 @@ nav span.separator {
   .tours-wrapper .tours-pic-container .tour-pics .tour-pic7,
   .tours-wrapper .tours-pic-container .tour-pics .tour-pic8,
   .tours-wrapper .tours-pic-container .tour-pics .tour-pic9 {
+    width: 90%;
+    max-width: 500px;
+    height: 350px;
+  }
+}
+@font-face {
+  font-family: "Proxima Nova ScOsf Extra Condensed";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url("../fonts/ProximaNovaScOsfExtraCondensed.ttf");
+  src: url("../fonts/Gill Sans Light Italic.otf") format("opentype");
+  font-weight: lighter;
+  font-style: italic;
+}
+.special-wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.special-wrapper h2 {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 30px;
+  font-weight: lighter;
+  color: #000;
+  margin-top: 55px;
+  margin-bottom: 44px;
+  text-decoration: underline 2px #000;
+}
+.special-wrapper .content-holder {
+  width: 565px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.special-wrapper .content-holder .image-holder1 {
+  width: 200px;
+  height: 287px;
+  background-image: url(../images/special-offer-01.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.special-wrapper .content-holder .image-holder2 {
+  width: 200px;
+  height: 287px;
+  background-image: url(../images/special-offer-02.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.special-wrapper .content-holder .text-holder {
+  width: 350px;
+  height: 287px;
+  position: relative;
+}
+.special-wrapper .content-holder .text-holder .title-holder {
+  margin-bottom: 28px;
+  display: flex;
+}
+.special-wrapper .content-holder .text-holder .title-holder .place {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 30px;
+  font-weight: lighter;
+  color: #000;
+  margin-right: 5px;
+  text-decoration: underline 2px #000;
+}
+.special-wrapper .content-holder .text-holder .title-holder .discount {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  color: #FF7D38;
+  padding-top: 7px;
+}
+.special-wrapper .content-holder .text-holder p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #000;
+  margin-bottom: 52px;
+}
+.special-wrapper .content-holder .text-holder button {
+  width: 133px;
+  height: 40px;
+  background: #79ADDC;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 50;
+  font-family: "Gill Sans", sans-serif;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+@media screen and (max-width: 590px) {
+  .special-wrapper {
+    padding: 0 20px;
+  }
+  .special-wrapper h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .special-wrapper .content-holder {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .special-wrapper .content-holder .image-holder1,
+  .special-wrapper .content-holder .image-holder2 {
     width: 100%;
     max-width: 400px;
     height: auto;
+    aspect-ratio: 3/4;
+  }
+  .special-wrapper .content-holder .text-holder {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding: 10px;
+    position: static;
+  }
+  .special-wrapper .content-holder .text-holder .title-holder {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .special-wrapper .content-holder .text-holder .title-holder .place {
+    font-size: 26px;
+    text-decoration: underline 1.5px #000;
+  }
+  .special-wrapper .content-holder .text-holder .title-holder .discount {
+    font-size: 18px;
+    padding-top: 4px;
+  }
+  .special-wrapper .content-holder .text-holder p {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .special-wrapper .content-holder .text-holder button {
+    position: static;
+    margin: 0 auto;
+    display: block;
   }
 }
+@font-face {
+  font-family: "Proxima Nova ScOsf Extra Condensed";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url("../fonts/ProximaNovaScOsfExtraCondensed.ttf");
+  src: url("../fonts/Gill Sans Light Italic.otf") format("opentype");
+  font-weight: lighter;
+  font-style: italic;
+}
+.blog-wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.blog-wrapper h2 {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 30px;
+  font-weight: lighter;
+  color: #000;
+  margin-top: 55px;
+  margin-bottom: 44px;
+  text-decoration: underline 2px #000;
+}
+.blog-wrapper .content-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.blog-wrapper .content-holder .left-content {
+  width: 7%;
+  width: 60px;
+  height: 60px;
+  background-color: #79ADDC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.blog-wrapper .content-holder .left-content h5,
+.blog-wrapper .content-holder .left-content p {
+  color: white;
+  margin: 0;
+  font-size: 14px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.blog-wrapper .content-holder .left-content h5 {
+  font-size: 22px;
+}
+.blog-wrapper .content-holder .right-content {
+  width: 93%;
+}
+.blog-wrapper .content-holder .right-content .image-holder {
+  width: 900px;
+  height: 259px;
+}
+.blog-wrapper .content-holder .right-content .image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.blog-wrapper .content-holder .right-content .quote {
+  max-width: 380px;
+}
+.blog-wrapper .content-holder .right-content .quote .title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  font-weight: regular;
+  color: #000;
+  margin-top: 20px;
+  margin-bottom: 11px;
+}
+.blog-wrapper .content-holder .right-content .quote p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 13px;
+  font-weight: regular;
+  color: #79ADDC;
+}
+
+@media screen and (max-width: 985px) {
+  .blog-wrapper {
+    padding: 0 20px;
+  }
+  .blog-wrapper .content-holder {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .blog-wrapper .content-holder .left-content {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  .blog-wrapper .content-holder .right-content {
+    width: 100%;
+  }
+  .blog-wrapper .content-holder .right-content .image-holder {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .blog-wrapper .content-holder .right-content .image-holder img {
+    width: 100%;
+    height: auto;
+  }
+  .blog-wrapper .content-holder .right-content .quote {
+    max-width: 100%;
+    text-align: center;
+  }
+  .blog-wrapper .content-holder .right-content .quote .title {
+    font-size: 16px;
+  }
+  .blog-wrapper .content-holder .right-content .quote p {
+    font-size: 14px;
+  }
+}
+@font-face {
+  font-family: "Proxima Nova ScOsf Extra Condensed";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url("../fonts/ProximaNovaScOsfExtraCondensed.ttf");
+  src: url("../fonts/Gill Sans Light Italic.otf") format("opentype");
+  font-weight: lighter;
+  font-style: italic;
+}
+.contact-wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.contact-wrapper h2 {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 30px;
+  font-weight: lighter;
+  color: #000;
+  margin-top: 55px;
+  margin-bottom: 44px;
+  text-decoration: underline 2px #000;
+}
+.contact-wrapper .content-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contact-wrapper .content-holder .left-content .image-holder {
+  width: 400px;
+  height: 442px;
+}
+.contact-wrapper .content-holder .left-content .image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.contact-wrapper .content-holder .left-content .address {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  margin-top: 34px;
+}
+.contact-wrapper .content-holder .right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.contact-wrapper .content-holder .right-content .top-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-wrapper .content-holder .right-content .top-inputs input {
+  width: 530px;
+  height: 60px;
+  background-color: #F5F5F5;
+  border: none;
+  padding-left: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+}
+.contact-wrapper .content-holder .right-content .message-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+.contact-wrapper .content-holder .right-content .message-inputs textarea {
+  width: 530px;
+  height: 198px;
+  background-color: #F5F5F5;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 100;
+  resize: none;
+}
+.contact-wrapper .content-holder .right-content .message-inputs button {
+  width: 167px;
+  height: 60px;
+  background: #79ADDC;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-family: "Gill Sans", sans-serif;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contact-wrapper .content-holder .right-content .message-inputs button:hover {
+  background: #5a97c9;
+}
+
+@media screen and (max-width: 417px) {
+  .contact-wrapper {
+    padding: 0 15px;
+  }
+  .contact-wrapper h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .contact-wrapper .content-holder {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .contact-wrapper .content-holder .left-content .image-holder {
+    width: 100%;
+    height: auto;
+  }
+  .contact-wrapper .content-holder .left-content .image-holder img {
+    width: 100%;
+    height: auto;
+  }
+  .contact-wrapper .content-holder .left-content .address {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .contact-wrapper .content-holder .right-content {
+    width: 100%;
+    align-items: center;
+  }
+  .contact-wrapper .content-holder .right-content .top-inputs input,
+  .contact-wrapper .content-holder .right-content .message-inputs textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+  .contact-wrapper .content-holder .right-content .message-inputs {
+    width: 100%;
+    align-items: center;
+  }
+  .contact-wrapper .content-holder .right-content .message-inputs button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+@font-face {
+  font-family: "Proxima Nova ScOsf Extra Condensed";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url("../fonts/ProximaNovaScOsfExtraCondensed.ttf");
+  src: url("../fonts/Gill Sans Light Italic.otf") format("opentype");
+  font-weight: lighter;
+  font-style: italic;
+}
+.tour-package-wrapper {
+  max-width: 980px;
+  min-height: 200px;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+.tour-package-wrapper .tour-header {
+  width: 100%;
+  height: 413px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-01.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.tour-package-wrapper .tour-header h2 {
+  position: absolute;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  padding-left: 30px;
+}
+.tour-package-wrapper .tour-header p {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+.tour-package-wrapper .tours-pic-container {
+  max-width: 978px;
+  min-height: 347px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.tour-package-wrapper .tours-pic-container .tour-pic1,
+.tour-package-wrapper .tours-pic-container .tour-pic2,
+.tour-package-wrapper .tours-pic-container .tour-pic3 {
+  width: 298px;
+  height: 347px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.tour-package-wrapper .tours-pic-container .tour-pic1:nth-child(1),
+.tour-package-wrapper .tours-pic-container .tour-pic2:nth-child(1),
+.tour-package-wrapper .tours-pic-container .tour-pic3:nth-child(1) {
+  background-image: url(../images/israel-tour-01.jpg);
+}
+.tour-package-wrapper .tours-pic-container .tour-pic1:nth-child(2),
+.tour-package-wrapper .tours-pic-container .tour-pic2:nth-child(2),
+.tour-package-wrapper .tours-pic-container .tour-pic3:nth-child(2) {
+  background-image: url(../images/israel-tour-02.jpg);
+}
+.tour-package-wrapper .tours-pic-container .tour-pic1:nth-child(3),
+.tour-package-wrapper .tours-pic-container .tour-pic2:nth-child(3),
+.tour-package-wrapper .tours-pic-container .tour-pic3:nth-child(3) {
+  background-image: url(../images/israel-tour-03.jpg);
+}
+.tour-package-wrapper .days-container .days {
+  width: 100%;
+  margin-bottom: 70px;
+}
+.tour-package-wrapper .days-container .days h2 {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-decoration: underline 2px #000;
+}
+.tour-package-wrapper .days-container .days p {
+  font-family: "Gill Sans";
+  font-size: 18px;
+  font-weight: 50;
+}
+.tour-package-wrapper .button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.tour-package-wrapper .button-wrapper button {
+  width: 133px;
+  height: 40px;
+  display: block;
+  background-color: #79ADDC;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}
+
+@font-face {
+  font-family: "Proxima Nova ScOsf Extra Condensed";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url("../fonts/ProximaNovaScOsfExtraCondensed.ttf");
+  src: url("../fonts/Gill Sans Light Italic.otf") format("opentype");
+  font-weight: lighter;
+  font-style: italic;
+}
+.usa-wrapper {
+  max-width: 980px;
+  min-height: 200px;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+.usa-wrapper .tour-header {
+  width: 100%;
+  height: 413px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-02.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.usa-wrapper .tour-header h2 {
+  position: absolute;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  padding-left: 30px;
+}
+.usa-wrapper .tour-header p {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+.usa-wrapper .tours-pic-container {
+  max-width: 978px;
+  min-height: 347px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.usa-wrapper .tours-pic-container .tour-pic1,
+.usa-wrapper .tours-pic-container .tour-pic2,
+.usa-wrapper .tours-pic-container .tour-pic3 {
+  width: 298px;
+  height: 347px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.usa-wrapper .tours-pic-container .tour-pic1:nth-child(1),
+.usa-wrapper .tours-pic-container .tour-pic2:nth-child(1),
+.usa-wrapper .tours-pic-container .tour-pic3:nth-child(1) {
+  background-image: url(../images/usa-tour-01.jpg);
+}
+.usa-wrapper .tours-pic-container .tour-pic1:nth-child(2),
+.usa-wrapper .tours-pic-container .tour-pic2:nth-child(2),
+.usa-wrapper .tours-pic-container .tour-pic3:nth-child(2) {
+  background-image: url(../images/usa-tour-02.jpg);
+}
+.usa-wrapper .tours-pic-container .tour-pic1:nth-child(3),
+.usa-wrapper .tours-pic-container .tour-pic2:nth-child(3),
+.usa-wrapper .tours-pic-container .tour-pic3:nth-child(3) {
+  background-image: url(../images/usa-tour-03.jpg);
+}
+.usa-wrapper .days-container .days {
+  width: 100%;
+  margin-bottom: 70px;
+}
+.usa-wrapper .days-container .days h2 {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-decoration: underline 2px #000;
+}
+.usa-wrapper .days-container .days p {
+  font-family: "Gill Sans";
+  font-size: 18px;
+  font-weight: 50;
+}
+.usa-wrapper .button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.usa-wrapper .button-wrapper button {
+  width: 133px;
+  height: 40px;
+  display: block;
+  background-color: #79ADDC;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}
+
+@font-face {
+  font-family: "Proxima Nova ScOsf Extra Condensed";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url("../fonts/ProximaNovaScOsfExtraCondensed.ttf");
+  src: url("../fonts/Gill Sans Light Italic.otf") format("opentype");
+  font-weight: lighter;
+  font-style: italic;
+}
+.australia-wrapper {
+  max-width: 980px;
+  min-height: 200px;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+.australia-wrapper .tour-header {
+  width: 100%;
+  height: 413px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-03.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.australia-wrapper .tour-header h2 {
+  position: absolute;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  padding-left: 30px;
+}
+.australia-wrapper .tour-header p {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+.australia-wrapper .tours-pic-container {
+  max-width: 978px;
+  min-height: 347px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.australia-wrapper .tours-pic-container .tour-pic1,
+.australia-wrapper .tours-pic-container .tour-pic2,
+.australia-wrapper .tours-pic-container .tour-pic3 {
+  width: 298px;
+  height: 347px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.australia-wrapper .tours-pic-container .tour-pic1:nth-child(1),
+.australia-wrapper .tours-pic-container .tour-pic2:nth-child(1),
+.australia-wrapper .tours-pic-container .tour-pic3:nth-child(1) {
+  background-image: url(../images/aus-tour-01.jpg);
+}
+.australia-wrapper .tours-pic-container .tour-pic1:nth-child(2),
+.australia-wrapper .tours-pic-container .tour-pic2:nth-child(2),
+.australia-wrapper .tours-pic-container .tour-pic3:nth-child(2) {
+  background-image: url(../images/aus-tour-02.jpg);
+}
+.australia-wrapper .tours-pic-container .tour-pic1:nth-child(3),
+.australia-wrapper .tours-pic-container .tour-pic2:nth-child(3),
+.australia-wrapper .tours-pic-container .tour-pic3:nth-child(3) {
+  background-image: url(../images/aus-tour-03.jpg);
+}
+.australia-wrapper .days-container .days {
+  width: 100%;
+  margin-bottom: 70px;
+}
+.australia-wrapper .days-container .days h2 {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-decoration: underline 2px #000;
+}
+.australia-wrapper .days-container .days p {
+  font-family: "Gill Sans";
+  font-size: 18px;
+  font-weight: 50;
+}
+.australia-wrapper .button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.australia-wrapper .button-wrapper button {
+  width: 133px;
+  height: 40px;
+  display: block;
+  background-color: #79ADDC;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}
+
+@font-face {
+  font-family: "Proxima Nova ScOsf Extra Condensed";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url("../fonts/ProximaNovaScOsfExtraCondensed.ttf");
+  src: url("../fonts/Gill Sans Light Italic.otf") format("opentype");
+  font-weight: lighter;
+  font-style: italic;
+}
+.nz-wrapper {
+  max-width: 980px;
+  min-height: 200px;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+.nz-wrapper .tour-header {
+  width: 100%;
+  height: 413px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-04.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.nz-wrapper .tour-header h2 {
+  position: absolute;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  padding-left: 30px;
+}
+.nz-wrapper .tour-header p {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+.nz-wrapper .tours-pic-container {
+  max-width: 978px;
+  min-height: 347px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.nz-wrapper .tours-pic-container .tour-pic1,
+.nz-wrapper .tours-pic-container .tour-pic2,
+.nz-wrapper .tours-pic-container .tour-pic3 {
+  width: 298px;
+  height: 347px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.nz-wrapper .tours-pic-container .tour-pic1:nth-child(1),
+.nz-wrapper .tours-pic-container .tour-pic2:nth-child(1),
+.nz-wrapper .tours-pic-container .tour-pic3:nth-child(1) {
+  background-image: url(../images/nz-tour-01.jpg);
+}
+.nz-wrapper .tours-pic-container .tour-pic1:nth-child(2),
+.nz-wrapper .tours-pic-container .tour-pic2:nth-child(2),
+.nz-wrapper .tours-pic-container .tour-pic3:nth-child(2) {
+  background-image: url(../images/nz-tour-02.jpg);
+}
+.nz-wrapper .tours-pic-container .tour-pic1:nth-child(3),
+.nz-wrapper .tours-pic-container .tour-pic2:nth-child(3),
+.nz-wrapper .tours-pic-container .tour-pic3:nth-child(3) {
+  background-image: url(../images/nz-tour-03.jpg);
+}
+.nz-wrapper .days-container .days {
+  width: 100%;
+  margin-bottom: 70px;
+}
+.nz-wrapper .days-container .days h2 {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-decoration: underline 2px #000;
+}
+.nz-wrapper .days-container .days p {
+  font-family: "Gill Sans";
+  font-size: 18px;
+  font-weight: 50;
+}
+.nz-wrapper .button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.nz-wrapper .button-wrapper button {
+  width: 133px;
+  height: 40px;
+  display: block;
+  background-color: #79ADDC;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}
+
+@font-face {
+  font-family: "Proxima Nova ScOsf Extra Condensed";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url("../fonts/ProximaNovaScOsfExtraCondensed.ttf");
+  src: url("../fonts/Gill Sans Light Italic.otf") format("opentype");
+  font-weight: lighter;
+  font-style: italic;
+}
+.france-wrapper {
+  max-width: 980px;
+  min-height: 200px;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+.france-wrapper .tour-header {
+  width: 100%;
+  height: 413px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-05.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.france-wrapper .tour-header h2 {
+  position: absolute;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  padding-left: 30px;
+}
+.france-wrapper .tour-header p {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+.france-wrapper .tours-pic-container {
+  max-width: 978px;
+  min-height: 347px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.france-wrapper .tours-pic-container .tour-pic1,
+.france-wrapper .tours-pic-container .tour-pic2,
+.france-wrapper .tours-pic-container .tour-pic3 {
+  width: 298px;
+  height: 347px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.france-wrapper .tours-pic-container .tour-pic1:nth-child(1),
+.france-wrapper .tours-pic-container .tour-pic2:nth-child(1),
+.france-wrapper .tours-pic-container .tour-pic3:nth-child(1) {
+  background-image: url(../images/france-tour-01.jpg);
+}
+.france-wrapper .tours-pic-container .tour-pic1:nth-child(2),
+.france-wrapper .tours-pic-container .tour-pic2:nth-child(2),
+.france-wrapper .tours-pic-container .tour-pic3:nth-child(2) {
+  background-image: url(../images/france-tour-02.jpg);
+}
+.france-wrapper .tours-pic-container .tour-pic1:nth-child(3),
+.france-wrapper .tours-pic-container .tour-pic2:nth-child(3),
+.france-wrapper .tours-pic-container .tour-pic3:nth-child(3) {
+  background-image: url(../images/france-tour-03.jpg);
+}
+.france-wrapper .days-container .days {
+  width: 100%;
+  margin-bottom: 70px;
+}
+.france-wrapper .days-container .days h2 {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-decoration: underline 2px #000;
+}
+.france-wrapper .days-container .days p {
+  font-family: "Gill Sans";
+  font-size: 18px;
+  font-weight: 50;
+}
+.france-wrapper .button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.france-wrapper .button-wrapper button {
+  width: 133px;
+  height: 40px;
+  display: block;
+  background-color: #79ADDC;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}
+
+@font-face {
+  font-family: "Proxima Nova ScOsf Extra Condensed";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url("../fonts/ProximaNovaScOsfExtraCondensed.ttf");
+  src: url("../fonts/Gill Sans Light Italic.otf") format("opentype");
+  font-weight: lighter;
+  font-style: italic;
+}
+.egypt-wrapper {
+  max-width: 980px;
+  min-height: 200px;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+.egypt-wrapper .tour-header {
+  width: 100%;
+  height: 413px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-06.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.egypt-wrapper .tour-header h2 {
+  position: absolute;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  padding-left: 30px;
+}
+.egypt-wrapper .tour-header p {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+.egypt-wrapper .tours-pic-container {
+  max-width: 978px;
+  min-height: 347px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.egypt-wrapper .tours-pic-container .tour-pic1,
+.egypt-wrapper .tours-pic-container .tour-pic2,
+.egypt-wrapper .tours-pic-container .tour-pic3 {
+  width: 298px;
+  height: 347px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.egypt-wrapper .tours-pic-container .tour-pic1:nth-child(1),
+.egypt-wrapper .tours-pic-container .tour-pic2:nth-child(1),
+.egypt-wrapper .tours-pic-container .tour-pic3:nth-child(1) {
+  background-image: url(../images/egypt-tour-01.jpg);
+}
+.egypt-wrapper .tours-pic-container .tour-pic1:nth-child(2),
+.egypt-wrapper .tours-pic-container .tour-pic2:nth-child(2),
+.egypt-wrapper .tours-pic-container .tour-pic3:nth-child(2) {
+  background-image: url(../images/egypt-tour-02.jpg);
+}
+.egypt-wrapper .tours-pic-container .tour-pic1:nth-child(3),
+.egypt-wrapper .tours-pic-container .tour-pic2:nth-child(3),
+.egypt-wrapper .tours-pic-container .tour-pic3:nth-child(3) {
+  background-image: url(../images/egypt-tour-03.jpg);
+}
+.egypt-wrapper .days-container .days {
+  width: 100%;
+  margin-bottom: 70px;
+}
+.egypt-wrapper .days-container .days h2 {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-decoration: underline 2px #000;
+}
+.egypt-wrapper .days-container .days p {
+  font-family: "Gill Sans";
+  font-size: 18px;
+  font-weight: 50;
+}
+.egypt-wrapper .button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.egypt-wrapper .button-wrapper button {
+  width: 133px;
+  height: 40px;
+  display: block;
+  background-color: #79ADDC;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}
+
+@font-face {
+  font-family: "Proxima Nova ScOsf Extra Condensed";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url("../fonts/ProximaNovaScOsfExtraCondensed.ttf");
+  src: url("../fonts/Gill Sans Light Italic.otf") format("opentype");
+  font-weight: lighter;
+  font-style: italic;
+}
+.japan-wrapper {
+  max-width: 980px;
+  min-height: 200px;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+.japan-wrapper .tour-header {
+  width: 100%;
+  height: 413px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-07.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.japan-wrapper .tour-header h2 {
+  position: absolute;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  padding-left: 30px;
+}
+.japan-wrapper .tour-header p {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+.japan-wrapper .tours-pic-container {
+  max-width: 978px;
+  min-height: 347px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.japan-wrapper .tours-pic-container .tour-pic1,
+.japan-wrapper .tours-pic-container .tour-pic2,
+.japan-wrapper .tours-pic-container .tour-pic3 {
+  width: 298px;
+  height: 347px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.japan-wrapper .tours-pic-container .tour-pic1:nth-child(1),
+.japan-wrapper .tours-pic-container .tour-pic2:nth-child(1),
+.japan-wrapper .tours-pic-container .tour-pic3:nth-child(1) {
+  background-image: url(../images/japan-tour-01.jpg);
+}
+.japan-wrapper .tours-pic-container .tour-pic1:nth-child(2),
+.japan-wrapper .tours-pic-container .tour-pic2:nth-child(2),
+.japan-wrapper .tours-pic-container .tour-pic3:nth-child(2) {
+  background-image: url(../images/japan-tour-02.jpg);
+}
+.japan-wrapper .tours-pic-container .tour-pic1:nth-child(3),
+.japan-wrapper .tours-pic-container .tour-pic2:nth-child(3),
+.japan-wrapper .tours-pic-container .tour-pic3:nth-child(3) {
+  background-image: url(../images/japan-tour-03.jpg);
+}
+.japan-wrapper .days-container .days {
+  width: 100%;
+  margin-bottom: 70px;
+}
+.japan-wrapper .days-container .days h2 {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-decoration: underline 2px #000;
+}
+.japan-wrapper .days-container .days p {
+  font-family: "Gill Sans";
+  font-size: 18px;
+  font-weight: 50;
+}
+.japan-wrapper .button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.japan-wrapper .button-wrapper button {
+  width: 133px;
+  height: 40px;
+  display: block;
+  background-color: #79ADDC;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}
+
+@font-face {
+  font-family: "Proxima Nova ScOsf Extra Condensed";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url("../fonts/ProximaNovaScOsfExtraCondensed.ttf");
+  src: url("../fonts/Gill Sans Light Italic.otf") format("opentype");
+  font-weight: lighter;
+  font-style: italic;
+}
+.canada-wrapper {
+  max-width: 980px;
+  min-height: 200px;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+.canada-wrapper .tour-header {
+  width: 100%;
+  height: 413px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tour-08.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.canada-wrapper .tour-header h2 {
+  position: absolute;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  padding-left: 30px;
+}
+.canada-wrapper .tour-header p {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+.canada-wrapper .tours-pic-container {
+  max-width: 978px;
+  min-height: 347px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.canada-wrapper .tours-pic-container .tour-pic1,
+.canada-wrapper .tours-pic-container .tour-pic2,
+.canada-wrapper .tours-pic-container .tour-pic3 {
+  width: 298px;
+  height: 347px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.canada-wrapper .tours-pic-container .tour-pic1:nth-child(1),
+.canada-wrapper .tours-pic-container .tour-pic2:nth-child(1),
+.canada-wrapper .tours-pic-container .tour-pic3:nth-child(1) {
+  background-image: url(../images/canada-tour-01.jpg);
+}
+.canada-wrapper .tours-pic-container .tour-pic1:nth-child(2),
+.canada-wrapper .tours-pic-container .tour-pic2:nth-child(2),
+.canada-wrapper .tours-pic-container .tour-pic3:nth-child(2) {
+  background-image: url(../images/canada-tour-02.jpg);
+}
+.canada-wrapper .tours-pic-container .tour-pic1:nth-child(3),
+.canada-wrapper .tours-pic-container .tour-pic2:nth-child(3),
+.canada-wrapper .tours-pic-container .tour-pic3:nth-child(3) {
+  background-image: url(../images/canada-tour-03.jpg);
+}
+.canada-wrapper .days-container .days {
+  width: 100%;
+  margin-bottom: 70px;
+}
+.canada-wrapper .days-container .days h2 {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-decoration: underline 2px #000;
+}
+.canada-wrapper .days-container .days p {
+  font-family: "Gill Sans";
+  font-size: 18px;
+  font-weight: 50;
+}
+.canada-wrapper .button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.canada-wrapper .button-wrapper button {
+  width: 133px;
+  height: 40px;
+  display: block;
+  background-color: #79ADDC;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}
+
+@font-face {
+  font-family: "Proxima Nova ScOsf Extra Condensed";
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  src: url("../fonts/ProximaNovaScOsfExtraCondensed.ttf");
+  src: url("../fonts/Gill Sans Light Italic.otf") format("opentype");
+  font-weight: lighter;
+  font-style: italic;
+}
+.uae-wrapper {
+  max-width: 980px;
+  min-height: 200px;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+.uae-wrapper .tour-header {
+  width: 100%;
+  height: 413px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(../images/tour-09.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.uae-wrapper .tour-header h2 {
+  position: absolute;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  padding-left: 30px;
+}
+.uae-wrapper .tour-header p {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  color: #fff;
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+.uae-wrapper .tours-pic-container {
+  max-width: 978px;
+  min-height: 347px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.uae-wrapper .tours-pic-container .tour-pic1,
+.uae-wrapper .tours-pic-container .tour-pic2,
+.uae-wrapper .tours-pic-container .tour-pic3 {
+  width: 298px;
+  height: 347px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.uae-wrapper .tours-pic-container .tour-pic1:nth-child(1),
+.uae-wrapper .tours-pic-container .tour-pic2:nth-child(1),
+.uae-wrapper .tours-pic-container .tour-pic3:nth-child(1) {
+  background-image: url(../images/uae-tour-01.jpg);
+}
+.uae-wrapper .tours-pic-container .tour-pic1:nth-child(2),
+.uae-wrapper .tours-pic-container .tour-pic2:nth-child(2),
+.uae-wrapper .tours-pic-container .tour-pic3:nth-child(2) {
+  background-image: url(../images/uae-tour-02.jpg);
+}
+.uae-wrapper .tours-pic-container .tour-pic1:nth-child(3),
+.uae-wrapper .tours-pic-container .tour-pic2:nth-child(3),
+.uae-wrapper .tours-pic-container .tour-pic3:nth-child(3) {
+  background-image: url(../images/uae-tour-03.jpg);
+}
+.uae-wrapper .days-container .days {
+  width: 100%;
+  margin-bottom: 70px;
+}
+.uae-wrapper .days-container .days h2 {
+  font-family: "Proxima Nova ScOsf Extra Condensed", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-decoration: underline 2px #000;
+}
+.uae-wrapper .days-container .days p {
+  font-family: "Gill Sans";
+  font-size: 18px;
+  font-weight: 50;
+}
+.uae-wrapper .button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.uae-wrapper .button-wrapper button {
+  width: 133px;
+  height: 40px;
+  display: block;
+  background-color: #79ADDC;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}
+
 @font-face {
   font-family: "Gill Sans";
   src: url("../fonts/Gill Sans Medium.otf") format("opentype");

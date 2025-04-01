@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'Proxima Nova ScOsf Extra Condensed';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    src: url('../fonts/ProximaNovaScOsfExtraCondensed.ttf');
+    src: url('../fonts/Gill\ Sans\ Light\ Italic.otf') format('opentype');
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.blog-wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+
+    h2 {
+        font-family: 'Proxima Nova ScOsf Extra Condensed', sans-serif;
+        font-size: 30px;
+        font-weight: lighter;
+        color: #000;
+        margin-top: 55px;
+        margin-bottom: 44px;
+        text-decoration: underline 2px #000;
+    }
+
+    .content-holder {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 100px;
+
+
+        .left-content {
+            width: 7%;
+            width: 60px;
+            height: 60px;
+            background-color: #79ADDC;
+
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h5,
+            p {
+                color: white;
+                margin: 0;
+                font-size: 14px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+            h5 {
+                font-size: 22px;
+            }
+        }
+
+
+        .right-content {
+            width: 93%;
+
+
+            .image-holder {
+                width: 900px;
+                height: 259px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            .quote {
+                max-width: 380px;
+
+                .title {
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-size: 15px;
+                    font-weight: regular;
+                    color: #000;
+                    margin-top: 20px;
+                    margin-bottom: 11px;
+                }
+
+                p {
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-size: 13px;
+                    font-weight: regular;
+                    color: #79ADDC;
+
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 985px) {
+    .blog-wrapper {
+        padding: 0 20px;
+
+        .content-holder {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .content-holder .left-content {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .content-holder .right-content {
+            width: 100%;
+
+            .image-holder {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .quote {
+                max-width: 100%;
+                text-align: center;
+
+                .title {
+                    font-size: 16px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
